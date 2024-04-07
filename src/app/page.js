@@ -25,7 +25,7 @@ const products = await getData();
 
       <div className="flex flex-wrap justify-center gap-4 mt-5 w-full">
         {console.log(products)}
-        
+        {(products)?.map((product) => < Product key={product._id} />)}
       </div>
 
       <FooterBanner />
