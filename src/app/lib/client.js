@@ -5,7 +5,7 @@ import { createClient } from "next-sanity"
 export const client = createClient({
     projectId: 'rtlrkha5',
     dataset: 'production',
-    apiVersion: '2024-03-21',
+    apiVersion: '2024-03-31',
     useCdn: true,
     token: process.env.NEXT_PUBLIC_SANITY_TOKEN 
 });
