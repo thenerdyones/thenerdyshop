@@ -1,9 +1,16 @@
 import React from 'react'
+import { client } from '@/app/lib/client'
 
-const Navbar = () => {
-  return (
-    <div>Navbar</div>
-  )
+
+async function getData(){
+  const query = '*[_type == "product"]';
+  const prod = await client.fetch(query);
+  return console.log(prod);
 }
 
-export default Navbar
+export default async function NavBar() {
+  const data = await getData();
+  return (
+    <div>NavBar</div>
+  )
+}
